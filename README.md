@@ -1,8 +1,5 @@
 # Project 1: Multi-page Website
 
-
-** Due Mon Oct 17, 11:59pm PT **
-
 ## Goal
 
 You will create a website made of several HTML pages and related CSS to demonstrate the skills learned in class so far.
