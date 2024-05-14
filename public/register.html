@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width" name="viewport">
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="images/html-logo.jpg" rel="icon" type="image/x-icon">
+    <title>Register Your Snake</title>
+</head>
+<body>
+<header class="header">
+    <a href="index.html"><img alt="" class="headerimage" src="images/logo-image.jpg"></a>
+    <h1>Snake House</h1>
+    <input id="checkbox" type="checkbox">
+    <nav class="topnav">
+        <ul class="menu">
+            <li class="menu__item"><a href="index.html">Home</a></li>
+            <li class="menu__item"><a href="about.html">About Snakes</a></li>
+            <li class="menu__item active"><a href="register.html">Register</a></li>
+            <li class="menu__item submenu">
+                <input class="submenu1__checkbox" id="submenu1" type='checkbox'/>
+                <label class="submenu1__label down_arrow" for="submenu1">
+                    <span class="submenu__title1"><button class="drop-down"
+                                                          type="button">Shelters & Rescues</button></span>
+                    <span class="mobile__dropdown">Shelters & Rescues</span>
+                    <span class="arrow_down"><i class="gg-push-chevron-down-r"></i></span>
+                </label>
+                <ul class="submenu1">
+                    <li><a class="submenu__item" href="findashelter.html">Find a Shelter</a></li>
+                    <li><a class="submenu__item" href="volunteer.html">Volunteer</a></li>
+                    <li><a class="submenu__item" href="foster.html">Foster</a></li>
+                    <li><a class="submenu__item" href="snakecare.html">Snake Care</a></li>
+                </ul>
+            </li>
+            <li class="menu__item submenu">
+                <input class="submenu2__checkbox" id="submenu2" type='checkbox'/>
+                <label class="submenu2__label" for="submenu2">
+                    <span class="submenu__title"><button class="drop-down" type="button">More</button></span>
+                    <span class="mobile__dropdown">More</span>
+                    <i class="gg-push-chevron-down-r"></i>
+                </label>
+                <ul class="submenu2">
+                    <li><a class="submenu__item" href="community.html">Community</a></li>
+                    <li><a class="submenu__item" href="blogs.html">Blogs</a></li>
+                    <li><a class="submenu__item" href="donate.html">Donate</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <label class="menu-icon add" for="checkbox"><span class="navicon"></span>
+        <i class="gg-play-list-add" id="add"></i><span class="menu__text">Menu</span>
+    </label>
+    <label class="menu-icon remove" for="checkbox"><span class="navicon"></span>
+        <i class="gg-play-list-remove" id="remove"></i>
+    </label>
+</header>
+<main class="main_content">
+    <h2>Do you have a snake that is looking for a new home?</h2>
+    <h3>Register it here, and we will work on finding it a new home.</h3>
+    <div class="main_registration_form">
+        <form action="/register" class="registration_form" id="register" method="post">
+            <p class="instruction_text">Required fields are followed by <span aria-label="required"
+                                                                              class="required required_indicator"><strong>*</strong>required</span>
+            </p>
+            <label class="name" for="name">
+                <span class="label">Snake Name: </span>
+                <span class="required"><strong>*</strong>required</span></label>
+            <input class="input_name input" id="name" name="name" required type="text">
+            <label class="email" for="email"><span class="label"> Your Email: </span>
+                <span class="required"><strong>*</strong>required</span></label>
+            <input class="input_email input" id="email" name="email" required type="email">
+            <p>Lethal?</p>
+            <label class="container">Yes
+                <input name="lethal" type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <p>Alerts:</p>
+            <label class="container">Subscribe to our email alerts
+                <input name="alerts" type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="tier_dropdown" for="tier_dropdown"><span class="label">Snake Type: </span>
+                <span class="required"><strong>*</strong>required</span></label>
+            <select class="dropdown input" id="tier_dropdown" name="tier" required>
+                <option value="">Please select</option>
+                <option value="1">Python</option>
+                <option value="2">Cobra</option>
+                <option value="3">Boas</option>
+            </select>
+            <button class="submit_button" type="submit" value="Register">Register</button>
+        </form>
+    </div>
+</main>
+<footer class="footer">
+    <ul class="footerlinks">
+        <li class="footerlinks__item"><a href="privacy.html">Privacy</a></li>
+        <li class="footerlinks__item"><a href="contactus.html">Contact Us</a></li>
+        <li class="footerlinks__item"><a href="sitemap.html">Sitemap</a></li>
+        <li class="footerlinks__item"><a href="help.html">Help</a></li>
+    </ul>
+</footer>
+</body>
+</html>

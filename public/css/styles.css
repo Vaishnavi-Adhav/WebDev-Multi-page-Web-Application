@@ -1,0 +1,838 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+
+    background-color: papayawhip;
+
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    background-color: black;
+}
+
+header h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column: span 10;
+
+    color: white;
+
+    font-size: 2rem;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.topnav {
+    grid-column: span 12;
+    grid-row-start: 2;
+
+    position: absolute;
+    top: 18%;
+    width: 100%;
+}
+
+.submenu1, .submenu2 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    background-color: khaki;
+    color: black;
+
+    list-style-type: none;
+}
+
+.submenu1 li:hover, .submenu2 li:hover {
+    background-color: darkgray;
+    color: beige;
+}
+
+.submenu1__label, .submenu2__label {
+    display: flex;
+    justify-content: center;
+}
+
+.submenu1__checkbox, .submenu2__checkbox {
+    display: none;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+#checkbox {
+    display: none;
+    grid-column-start: -1;
+}
+
+#checkbox:checked ~ nav ul {
+    max-height: fit-content;
+}
+
+#remove {
+    display: none;
+}
+
+#checkbox:checked #remove {
+    display: block;
+}
+
+#checkbox:checked #add {
+    display: none;
+}
+
+#submenu1__checkbox, #submenu2__checkbox {
+    display: none;
+}
+
+.menu-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 15px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    padding-left: 2rem;
+    margin-right: 3rem;
+
+    color: #ffffff;
+
+    font-size: 1.2em;
+    line-height: 50px;
+}
+
+.menu__text {
+    margin-left: 2rem;
+}
+
+.menu {
+    padding: 0 0 1rem;
+
+    background-color: black;
+    color: white;
+
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    padding: 0 1rem;
+}
+
+.menu__item a {
+    display: inline-block;
+
+    padding: 1rem;
+
+    color: white;
+
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.menu__item:hover a {
+    color: black;
+}
+
+.submenu li a {
+    color: black;
+}
+
+.submenu i {
+    grid-column-start: 2;
+}
+
+.menu__item:hover {
+    background-color: white;
+    color: black;
+}
+
+input[type=checkbox] ~ .submenu1, .submenu2 {
+    display: none;
+}
+
+.menu__item:hover .gg-push-chevron-down-r, .gg-push-chevron-up-r {
+    color: black;
+}
+
+.active {
+    border-bottom: 2px solid white;
+}
+
+.submenu2__label, .submenu1__label {
+    align-items: center;
+
+    padding: 1rem;
+
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submenu1__checkbox:checked .submenu {
+    background-color: khaki;
+}
+
+.submenu2__checkbox:checked .submenu {
+    background-color: white;
+}
+
+.submenu1__checkbox:checked ~ .submenu1 {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    position: relative;
+}
+
+.submenu2__checkbox:checked ~ .submenu2 {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    position: relative;
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-play-list-add {
+    display: block;
+
+    border-top: 0 solid transparent;
+    border-bottom: 2px solid transparent;
+
+    color: white;
+
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs, 1));
+    width: 12px;
+    height: 6px;
+    scale: 2;
+    box-shadow: inset 0 -2px 0,
+    -2px 4px 0 -2px,
+    0 -2px 0 0
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-play-list-add:hover {
+    cursor: pointer;
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-play-list-add::after,
+.gg-play-list-add::before {
+    display: block;
+
+    background: currentColor;
+
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 6px;
+    right: -8px
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-play-list-add::before {
+    width: 2px;
+    height: 10px;
+    top: 2px;
+    right: -4px
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-push-chevron-down-r {
+    display: block;
+
+    margin-left: 1rem;
+    border: 2px solid;
+    border-radius: 4px;
+
+    color: white;
+
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs, 1));
+    width: 22px;
+    height: 22px;
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-push-chevron-down-r::after,
+.gg-push-chevron-down-r::before {
+    display: block;
+
+    border-bottom: 2px solid;
+
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-push-chevron-down-r::before {
+    bottom: 5px;
+    width: 8px;
+    height: 2px;
+    left: 5px
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.gg-push-chevron-down-r::after {
+    border-right: 2px solid;
+
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    left: 6px;
+    top: 3px
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.submenu1__checkbox:checked ~ .submenu1__label {
+    background-color: white;
+    color: black
+}
+
+/* Below CSS adapted from https://css.gg under the MIT License */
+.submenu2__checkbox:checked ~ .submenu2__label {
+    background-color: white;
+    color: black
+}
+
+.menu__item button {
+    display: none;
+}
+
+.card1, .card2, .card3, .card4 {
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 1rem 0.3rem;
+
+    background-color: lightgray;
+}
+
+.card1 {
+    background-color: #FFB6C1;
+}
+
+.card2 {
+    background-color: #FFA07A;
+}
+
+.card3 {
+    background-color: #AFEEEE;
+}
+
+.card4 {
+    background-color: #8FBC8F;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+    background-color: azure;
+}
+
+.card1 h3, .card2 h3, .card3 h3, .card4 h3 {
+    margin: 0.5rem;
+
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+
+    height: 11.5rem;
+}
+
+.moreinfo {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card1 p, .card2 p, .card3 p, .card4 p {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.readmore {
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: green;
+    color: white;
+
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+    text-decoration: none;
+}
+
+.readmore:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.snakecontent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.snakecontent h2 {
+    grid-column: span 12;
+}
+
+.about-snakes {
+    grid-column: span 12;
+
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    background-color: bisque;
+}
+
+.main_content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.main_registration_form {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.main_content h2 {
+    grid-column: 1/span2;
+
+    text-align: center;
+}
+
+.main_content h3 {
+    display: flex;
+    justify-content: center;
+    grid-column: span 12;
+}
+
+.main_registration_form {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.registration_form {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 1rem;
+
+    background-color: bisque;
+}
+
+.instruction_text {
+    grid-column: 1 / span 2;
+    justify-content: center;
+}
+
+.required_indicator {
+    padding-left: 0.2rem;
+}
+
+label {
+    padding-bottom: 0.5rem;
+}
+
+input, select {
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+}
+
+.annoy_me_text {
+    padding-bottom: 2rem;
+}
+
+.input_name, .input_email, .input_annoy_me, select {
+    padding: 0.5rem;
+}
+
+.required {
+    padding-left: 1rem;
+
+    color: gray;
+
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.spam {
+    display: grid;
+    grid-template: "checkbox text";
+    grid-template-columns: auto 1fr;
+}
+
+.input_annoy_me {
+    grid-area: checkbox;
+}
+
+.annoy_me_text {
+    grid-area: text;
+
+    padding-left: 0.5rem;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit_button {
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.submit_button:hover {
+    background-color: white;
+    color: black;
+}
+
+.footerlinks {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    padding-left: 0.3rem;
+    margin: 0;
+
+    background-color: black;
+
+    list-style: none;
+}
+
+.footerlinks__item {
+    grid-column: span 12;
+
+    padding: 0.7rem;
+    margin: 0.3rem;
+
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footerlinks__item a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.footerlinks__item a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 31rem) {
+    .topnav {
+        top: 20%;
+        position: initial;
+    }
+
+    .menu-icon {
+        grid-row-start: 1;
+        grid-column-start: -1;
+    }
+
+    .menu__text {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    header h1 {
+        grid-column: span 10;
+        align-items: center;
+        display: flex;
+
+        font-size: 2.2rem;
+    }
+
+    header .topnav {
+        grid-column-start: 1;
+        grid-column: span 12;
+        grid-row-start: 2;
+
+        background-color: black;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .topnav {
+        grid-row-start: 1;
+
+        position: relative;
+    }
+
+    .gg-play-list-remove, gg-play-list-add {
+        display: none;
+    }
+
+    .menu__item button {
+        display: block;
+
+        padding: 0 1rem;
+    }
+
+    .mobile__dropdown {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu__item:hover {
+        border-bottom: 3px solid red;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        height: 100%;
+        width: 100%;
+        overflow: revert;
+    }
+
+    .menu__item a {
+        margin: 0;
+
+        height: 100%;
+    }
+
+    .menu__item a:hover {
+        height: 100%;
+    }
+
+    .submenu1, .submenu2 {
+        position: absolute;
+        top: 7rem;
+    }
+
+    input[type=checkbox] ~ .submenu1, .submenu2 {
+        display: inherit;
+    }
+
+    .submenu1__checkbox:checked ~ .submenu1, .submenu2__checkbox:checked ~ .submenu2 {
+        background-color: khaki;
+
+        position: absolute;
+        top: auto;
+    }
+
+    .submenu1, .submenu2 {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .drop-down {
+        border: none;
+
+        background-color: inherit;
+        color: inherit;
+
+        font-size: inherit;
+        cursor: pointer;
+    }
+
+    .menu li:hover ul,
+    .menu button:focus .submenu1 {
+        height: auto;
+    }
+
+    .submenu1, .submenu2 {
+        position: absolute;
+        top: auto;
+    }
+
+    .menu li:hover ul,
+    .menu li:focus-within ul {
+        height: auto;
+    }
+
+    .submenu:focus-within {
+        border-bottom: 3px solid red;
+
+        background-color: white;
+        color: black;
+    }
+
+    .main_registration_form {
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+
+    .content-heading {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: span 12;
+    }
+
+    .content-heading h2 {
+        grid-column: span 12;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card1, .card2, .card3, .card4 {
+        grid-column: span 3;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+
+        margin-top: 0;
+        margin-bottom: 10rem;
+    }
+
+    .image {
+        aspect-ratio: 1/1;
+        width: max(94%, 6rem);
+        height: max(71%, 6rem);
+    }
+
+    .footerlinks__item {
+        grid-column: span 3;
+        align-items: center;
+
+        padding: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 77.5rem) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    header h1 {
+        grid-column: span 10;
+    }
+
+    header .topnav {
+        grid-column-start: -1;
+        grid-row-start: 1;
+
+        background-color: unset;
+    }
+
+    .topnav {
+        top: 10%;
+        position: relative;
+        grid-row-start: 1;
+        grid-column-start: -1;
+    }
+
+    .topnav ~ ul {
+        background-color: unset;
+    }
+
+    #checkbox:checked ~ nav ul {
+        max-height: 0;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu__item:hover {
+        border-bottom: 3px solid red;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-right: 3rem;
+
+        height: 100%;
+        width: 100%;
+        overflow: revert;
+    }
+
+    .menu__item a {
+        margin: 0;
+
+        height: 100%;
+    }
+
+    .menu__item a:hover {
+        color: black;
+
+        height: 100%;
+    }
+
+    .submenu1, .submenu2 {
+        position: absolute;
+        top: auto;
+    }
+}
+

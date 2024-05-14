@@ -1,0 +1,8 @@
+Image Name | URL | Pages Used On
+logo-image.jpg | https://images.unsplash.com/photo-1571391733814-15ac29ac3544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80 | Top Navigation bar - all pages
+kingsnake.jpg | https://images.unsplash.com/photo-1574799497000-ae898cc3ae0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80 | index.html
+indigosnake.jpg | https://images.unsplash.com/photo-1585095595274-aeffce35511a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 | index.html
+html-logo.jpg | https://images.unsplash.com/photo-1599686100490-c386c444baf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 | Website logo - all pages
+greensnake.jpg | https://images.unsplash.com/photo-1584315229729-67fdeae908a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1135&q=80 | index.html
+cobra.jpg | https://images.unsplash.com/photo-1662103563173-30e577e4e391?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80 | index.html
+
